@@ -46,7 +46,7 @@
 			       </table>
 			       </div>
 			    </div>
-		<input type="hidden" name="grand_total1" id="grand_total">
+		<input type="hidden" name="grand_total" id="grand_total1">
 	</form>
 	<div class="btn-group btn-group-justified" style="top:5em;width:60%;left:20em">
     	<div class="btn-group">
