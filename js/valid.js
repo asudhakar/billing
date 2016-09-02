@@ -51,7 +51,7 @@ $(document).ready(function()
 	 		total = total + grand_total;
  	}
 	 	var newTextBoxDiv ='<div style="margin-left: 515px;"><h2>grandtotal:</h2><h3 id="total"></h3></div>';
-		document.getElementById('grand_total').value =total;
+		document.getElementById('grand_total1').value =total;
 		
 	});
 	$(function() {
