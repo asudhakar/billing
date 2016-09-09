@@ -1,12 +1,26 @@
 <html>
 <head>
 	<title>Welcome</title>
+
   <?php
-    $det = serialize($_POST);
     include_once '../model/db.php';
-    $conn = db_connect();
-    $sql="INSERT INTO `purchase_details`(`items`) VALUES ('".$det."')";
-    $conn->query($sql);
+     $det = serialize($_POST);
+      $conn = db_connect();
+      $sql="INSERT INTO `purchase_details`(`items`, `date`) VALUES ('".$det."', '".date("Y-m-d")."')";
+      $conn->query($sql);
+         $val = (count($_POST)/5);
+        for ($i=1; $i <=$val; $i++) { 
+       
+            $sql1 ="SELECT `quantity` FROM item_details WHERE item_name = '".$_POST['item_name'.$i]."'";
+            $result = execute_query($sql1, $conn);
+            while ($row = $result->fetch_assoc()) {
+              $data = $row['quantity'];
+            }
+            $new_quantity =  $data - $_POST['qty'.$i];
+            $sql2 ="UPDATE `item_details` SET `quantity`='".$new_quantity."' WHERE `item_name`= '".$_POST['item_name'.$i]."'";
+            
+            $conn->query($sql2);
+        }
 
   ?>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
