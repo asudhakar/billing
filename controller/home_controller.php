@@ -7,6 +7,11 @@
     $conn = db_connect();
     $sql="INSERT INTO `purchase_details`(`items`) VALUES ('".$det."')";
     $conn->query($sql);
+    $sql_1 = "SELECT `id` FROM `purchase_details` ORDER BY id DESC limit 1 ";
+    $result = execute_query($sql_1, $conn);
+    $row = $result->fetch_assoc();
+    $bill_no =((int)$row['id']) + 1;
+    
 
   ?>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,8 +39,8 @@
        </div>
      </div>
      <div>
-     <p class="col-md-6">No:.................................</p>
-     <p class="col-md-6" style="text-align:right;floar:right;">Date:.................................</p>
+     <p class="col-md-6">No:<?php  echo "se".$bill_no; ?></p>
+     <p class="col-md-6" style="text-align:right;floar:right;">Date:<?php echo date('Y-m-d'); ?></p>
      </div>
           <table style="border:2px solid #000080;border-style:solid;width:100%; top:1em;">
                   <tr>
@@ -51,11 +56,11 @@
                  $val = (count($_POST)/5);
                   	for ($i=1;$i<=$val; $i++) {              
 		                  echo "<tr>
-				                    <td>'".$_POST['sno'.$i.'']."'</td>
-				                    <td>'".$_POST['item_name'.$i.'']."'</td>
-				                    <td>'".$_POST['unit_price'.$i.'']."'</td>
-				                    <td>'".$_POST['qty'.$i.'']."'</td>
-				                    <td>'".$_POST['total'.$i.'']."'</td>  
+				                    <td>".$_POST['sno'.$i.'']."</td>
+				                    <td>".$_POST['item_name'.$i.'']."</td>
+				                    <td>".$_POST['unit_price'.$i.'']."</td>
+				                    <td>".$_POST['qty'.$i.'']."</td>
+				                    <td>".$_POST['total'.$i.'']."</td>  
 								</tr>";
 							}
                    ?>
@@ -64,7 +69,7 @@
     </div>
 
     <?php
-      echo "<table style='width:100%'><tr><td>authorised signature</td>"; 
+      echo "<br><br><table style='width:100%'><tr><td>authorised signature</td>"; 
       echo "<td>Grand total:".$_POST['grand_total']."</td></table>";
     ?>
     <script>
