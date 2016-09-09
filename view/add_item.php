@@ -67,7 +67,7 @@
 					echo "<td>".$value['unit_price']."</td>";
 					echo "<td>".$value['quantity']."</td>";
 					echo "<td>".$value['alert_at']."</td>";	
-					echo "<td><a href='../view/edit_user.php?id=".$value['id']."'>Edit</a> <a href='../controller/delete_item.php?id=".$value['id']."'>Delete</a></td>";		
+					echo "<td><a href='../view/edit_item.php?id=".$value['id']."'>Edit</a> <a href='../controller/delete_item.php?id=".$value['id']."'>Delete</a></td>";		
 					echo "</tr>";
 				}
 			 ?>
