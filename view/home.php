@@ -8,8 +8,12 @@
     }
 </style>
 		<div style="border:5px solid #000">
+			<div>
+				<p style="text-align: right;">Tin :- 33233227155</p>
+			</div>
 			<div class="col-lg-12 page-header">
 				<img src="../images/logo.jpg" alt="LOGO" class="img-circle" width="190px" height="25%">
+
 				<div style="width:60%;float:right;"> 
 					<h1>
 						Senthil Electricals
@@ -21,9 +25,16 @@
 					<p>
 						Email:senthilele1983@gmail.com
 					</p>
+					<p>
+						Phone:9865742666
+					</p>
 				</div>
 			</div>
+			
 			<form method="post" action="../controller/home_controller.php" id="mainform">
+			<div id="phone_number_box">
+				<input type="number" class="form-control transparent-input" name="customer_phonenumber" placeholder="Mobile Number" style="position: relative;width: 314px; margin-left: 1063px;top: -63px;">
+			</div>
 			<div id="TextBoxesGroup">
 				<table class="table">
 					<tr>

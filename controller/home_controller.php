@@ -5,15 +5,11 @@
   <?php
     include_once '../model/db.php';
     $conn = db_connect();
-    $sql="INSERT INTO `purchase_details`(`items`) VALUES ('".$det."')";
-    $conn->query($sql);
     $sql_1 = "SELECT `id` FROM `purchase_details` ORDER BY id DESC limit 1 ";
     $result = execute_query($sql_1, $conn);
     $row = $result->fetch_assoc();
     $bill_no =((int)$row['id']) + 1;
-    
      $det = serialize($_POST);
-      $conn = db_connect();
       $sql="INSERT INTO `purchase_details`(`items`, `date`) VALUES ('".$det."', '".date("Y-m-d")."')";
       $conn->query($sql);
          $val = (count($_POST)/5);
@@ -45,13 +41,13 @@
            Senthil Electricals
          </h1>
          <p>
-           Electricals & Hardware
+           Chemicals Pirivu, Sankari
          </p>
          <p>
-           NO.12,S.P.S.complex,old edapadi road,sankagiri-637301
+           Email:senthilele1983@gmail.com
          </p>
          <p>
-           Email:senthil@gmail.com
+           Phone:9865742666
          </p>
        </div>
      </div>
@@ -70,7 +66,7 @@
                   <?php   
                   // print_r($_POST);
                   
-                 $val = (count($_POST)/5);
+                 $val = round(count($_POST)/5);
                   	for ($i=1;$i<=$val; $i++) {              
 		                  echo "<tr>
 				                    <td>".$_POST['sno'.$i.'']."</td>
