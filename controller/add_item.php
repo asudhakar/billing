@@ -4,4 +4,4 @@
 	$conn = db_connect();
 	$sql = "INSERT INTO `item_details`( `item_name`, `unit_price`, `quantity`, `alert_at`) VALUES ('".$_POST['item_name']."','".$_POST['unit_price']."','".$_POST['qty']."','".$_POST['alert_at']."')";
 	$result = $conn->query($sql);
-	header("Location:../view/add_item.php");
+	header("Location:../view/add_item.php?status=insert_success");

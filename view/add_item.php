@@ -10,6 +10,29 @@
 	foreach ($final as $value) {
 		$final1 = $value;
 	}
+
+	if(isset($_GET['status'])){
+	    $status = $_GET['status'];
+	  }else{
+	    $status = "";
+	  }
+	  switch ($status) {
+	    case 'deleted_success':
+	      echo '<div class="alert alert-success"><strong>Success!</strong>Stock Deleted Successfully</div>';
+	    break;
+
+	    case 'error':
+	      echo '<div class="alert alert-warning"><strong>Sorry!</strong>Something went wrongly.</div>';
+	    break;
+
+	    case 'insert_success':
+	        echo '<div class="alert alert-success"><strong>Success!</strong>Stock inserted Successfully</div>';
+	    	break;
+
+	    default:
+	      echo "";
+	    break;
+	  }
 ?>
 <div class="content-header">
 		<h1 >Add Item</h1>
@@ -37,6 +60,9 @@
 			</tr>
 		</table>
 	</form>	
+	<?php if(empty($final)){
+				echo "No rows inserted please insert one :)";
+			} else{ ?>
 		<table class="table table-striped">
 			<tr>
 				<td>
@@ -55,7 +81,8 @@
 					Options
 				</td>
 			</tr>
-			<?php 
+			<?php
+			
 				foreach ($final as $value) {
 					if($value['quantity']<=$value['alert_at']){
 						$alart = 'class="danger"';
@@ -70,6 +97,9 @@
 					echo "<td><a href='../view/edit_item.php?id=".$value['id']."'>Edit</a> <a href='../controller/delete_item.php?id=".$value['id']."'>Delete</a></td>";		
 					echo "</tr>";
 				}
+
+			}
+				
 			 ?>
 			
 		</table>
