@@ -41,19 +41,6 @@ $(document).ready(function()
 		
 	});
 
-	$('body').on('click', '#print', function()
-	{	var total = 0;
-	 	for(var temp = 1; temp<=i; temp++){
-	 		var textValue1 = document.getElementById('no_Uprice'+temp).value;
-			var textValue2 = document.getElementById('no_Qty'+temp).value;
-			document.getElementById('no_Total'+temp).value = textValue1 * textValue2;
-			var grand_total = parseInt(document.getElementById('no_Total'+temp).value);
-	 		total = total + grand_total;
- 	}
-	 	var newTextBoxDiv ='<div style="margin-left: 515px;"><h2>grandtotal:</h2><h3 id="total"></h3></div>';
-		document.getElementById('grand_total1').value =total;
-		
-	});
 	$(function() {
 		$( ".item_name1" ).autocomplete({
 			source: 'search.php'
@@ -72,7 +59,17 @@ $(document).ready(function()
 	             }
 	        });
 	});
-	$("#print").click(function(){
+	$('body').on('click', "#print", function(){
+			var total = 0;
+	 		for(var temp = 1; temp<=i; temp++){
+		 		var textValue1 = document.getElementById('no_Uprice'+temp).value;
+				var textValue2 = document.getElementById('no_Qty'+temp).value;
+				
+				document.getElementById('no_Total'+temp).value = textValue1 * textValue2;
+				var grand_total = parseInt(document.getElementById('no_Total'+temp).value);
+		 		total = total + grand_total;
+ 			
+			document.getElementById('grand_total1').value =total;
 	       var y = document.getElementsByClassName("item_name1");
 	       var z = document.getElementById("no_Qty1").value;
 	       var item_name = y[0].value;
@@ -86,14 +83,23 @@ $(document).ready(function()
 	             	console.log(z);
 	             	if (z>data) {
 	             			window.alert("out of stock!!!<br/>available stock:"+data);
-	             			document.getElementById('no_Qty1').value = 0;
-	             			document.getElementById('no_Total1').value = 0;
+	             			document.getElementById('no_Qty'+temp).innerHTML = 0;
+	             			document.getElementById('no_Total'+temp).innerHTML = 0;
+	             			window.location.href = "../index.php";
+	             			$("form").submit(function(e){
+	             				alert("test");
+	             				e.preventDefault(e);
+	             			});
+		                }else
+		                {
+		                	// $('#mainform').submit();
 		                }
 		                }
 	        });
-	        $('#mainform').submit();
+	        }
 	});
 	
 });
+
 
 
