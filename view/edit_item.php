@@ -5,37 +5,31 @@
 	$id = $_GET['id'];
 	$query = $db->query("SELECT * FROM item_details WHERE id = ".$id."");
 	$row = $query->fetch_assoc();
-	// print_r($row);
 ?>
-<div>
-	<table class="table table-striped">
-				<tr>
-					<td>
-						Item name
-					</td>
-					<td>
-						Item price
-					</td>
-					<td>
-						Item count
-					</td>
-					<td>
-						Alert At
-					</td>
-					<td>
-						Options
-					</td>
-				</tr>
-				<?php 
-					
-						echo "<tr>";
-						echo "<td><input type='text' class='form-control transparent-input item_name'  name='item_name" placeholder="Item Name" required>
-				</td>".$row['item_name']."</td>";
-						echo "<td>".$row['unit_price']."</td>";
-						echo "<td>".$row['quantity']."</td>";	
-						echo "<td>".$row['alert_at']."</td>";	
-						echo "</tr>";
-				 ?>
-				
-			</table>
+<div class="content-header">
+		<h1 >Edit Item</h1>
 	</div>
+	<form method="post" action="../controller/edit_item.php">
+	<input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+		<table class="table">
+			<tr>
+				<td>
+					<input type="text" class="form-control transparent-input item_name"  name="item_name" value="<?php echo $row['item_name'] ?>" required>
+				</td>
+				<td>
+					<input class="form-control transparent-input" type="number" name="unit_price" id="no_Uprice1" value="<?php echo $row['unit_price'] ?>" required>
+				</td>
+				<td>
+					<input class="form-control transparent-input" type="number" name="qty" id="no_Qty" value="<?php echo $row['quantity'] ?>" required>
+				</td>
+				<td>
+					<input class="form-control transparent-input" type="number" name="alert_at" id="alert_at" value="<?php echo $row['alert_at'] ?>" required>
+				</td>
+				<td>
+					<button class="btn  btn-primary" id="print">
+						update Item
+					</button>
+				</td>
+			</tr>
+		</table>
+	</form>	
