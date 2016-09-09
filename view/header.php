@@ -18,6 +18,5 @@
 		<a href="add_item.php" class="btn btn-default"><span>Add Stock</span></a>
 		<a href="home.php" class="btn btn-default"><span>Billing</span></a>
 		<a href="view_bills.php" class="btn btn-default"><span>View Bills</span></a>
-		<a href="notification.php" class="btn btn-default"><span><i class="fa fa-bell" style="color:red"></i><span class="label label-warning">10</span></span></a>
 	</div>
  
