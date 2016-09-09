@@ -27,7 +27,11 @@
 
 	    case 'insert_success':
 	        echo '<div class="alert alert-success"><strong>Success!</strong>Stock inserted Successfully</div>';
-	    	break;
+	    break;
+
+		case 'update_success':
+	        echo '<div class="alert alert-success"><strong>Success!</strong>Stock Updated Successfully</div>';
+	    break;
 
 	    default:
 	      echo "";
