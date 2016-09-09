@@ -9,38 +9,34 @@
     $conn->query($sql);
 
   ?>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="mydiv"  style="margin:80px;">
-          <table style="border:2px solid #000080;border-style:solid;width:100%;">
-            <tr>
-                          <td>
-                            <div>
-                              <img src="images/logo.jpg" alt="logo" style="width:200px;height:200px;margin-left: 2em;margin-top: 10px;">
-                            </div>
-                          </td>
-                          <td colspan="4"> 
-                            <div style="margin-left: -500px;">
-                              <h1>
-                                <center>Sri Sai Enterprises</center>
-                              </h1>
-                              <p>
-                                <center>Electricals & Hardware</center>
-                              </p>
-                              <p>
-                                <center>NO.12,S.P.S.complex,old edapadi road,sankagiri-637301</center>
-                              </p>
-                              <p>
-                                <center>Email:srisaiep@gmail.com</center>
-                              </p>
-                            </div>
-                          </td>
-            </tr>
-            <tr>
-                <th style="text-align:left">No:.................................</th>
-                <th style="text-align:right" colspan="4">Date:............................</th>
-            </tr>
-          </table>
+          <div style="border:5px solid #000">
+     <div class="col-lg-12 page-header">
+       <img src="../images/logo.jpg" alt="LOGO" class="img-circle" width="190px" height="25%">
+       <div style="width:60%;float:right;"> 
+         <h1>
+           Senthil Electricals
+         </h1>
+         <p>
+           Electricals & Hardware
+         </p>
+         <p>
+           NO.12,S.P.S.complex,old edapadi road,sankagiri-637301
+         </p>
+         <p>
+           Email:senthil@gmail.com
+         </p>
+       </div>
+     </div>
+     <div>
+     <p class="col-md-6">No:.................................</p>
+     <p class="col-md-6" style="text-align:right;floar:right;">Date:.................................</p>
+     </div>
           <table style="border:2px solid #000080;border-style:solid;width:100%; top:1em;">
                   <tr>
                     <td>S.No</td>
@@ -72,7 +68,11 @@
       echo "<td>Grand total:".$_POST['grand_total']."</td></table>";
     ?>
     <script>
-    	window.print();
+    // function test(){
+    // 	window.print();
+    //   document.location.href="../view/home.php";
+    // }
+    // test();
     </script>
 </body>
 </html>
