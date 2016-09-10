@@ -40,6 +40,7 @@ $(document).ready(function()
 		}
 		
 	});
+	
 
 	$(function() {
 		$( ".item_name1" ).autocomplete({
@@ -97,6 +98,11 @@ $(document).ready(function()
 		                }
 	        });
 	        }
+	});
+	$(function() {
+		$( "#mobile_no" ).autocomplete({
+			source: 'get_mobile_no.php'
+		});
 	});
 	
 });

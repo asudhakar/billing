@@ -33,7 +33,7 @@
 			
 			<form method="post" action="../controller/home_controller.php" id="mainform">
 			<div id="phone_number_box">
-				<input type="number" class="form-control transparent-input" name="customer_phonenumber" placeholder="Mobile Number" style="position: relative;width: 314px; margin-left: 1063px;top: -63px;">
+				<input type="number" class="form-control transparent-input" name="customer_phonenumber" id="mobile_no" placeholder="Mobile Number" style="position: relative;width: 314px; margin-left: 1063px;top: -63px;">
 			</div>
 			<div id="TextBoxesGroup">
 				<table class="table">
