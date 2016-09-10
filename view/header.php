@@ -18,5 +18,6 @@
 		<a href="add_item.php" class="btn btn-default"><span>Add Stock</span></a>
 		<a href="home.php" class="btn btn-default"><span>Billing</span></a>
 		<a href="view_bills.php" class="btn btn-default"><span>View Bills</span></a>
+		<a href="customer_details.php" class="btn btn-default"><span>Customer Details</span></a>
 	</div>
  
