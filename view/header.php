@@ -12,6 +12,13 @@
   	<link rel="stylesheet" href="../css/jquery.ui.css">
   	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
  	<meta name="viewport" content="width=device-width,initial-scale=1">
+ 	<style type="text/css">
+		.ui-autocomplete
+		{  
+			background-color: #286090;
+			color:White;
+		}
+ 	</style>
 </head>
 <body>
 	<div class="btn-group btn-group-justified" style="top:3px;margin-bottom:6px;">
