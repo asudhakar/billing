@@ -18,12 +18,44 @@
 	$sql = "SELECT * FROM `purchase_details` WHERE `customer_id` = '$id'";
 
 	$result = execute_query($sql, $conn);
-    while ($row = $result->fetch_assoc()) {
-        $total_orders[] = $row;
-    }
-    echo "<pre>";
-    print_r($total_orders);
-    echo "<table><th><td>Bill No</td><td>Date of Purchase</td><td>Items</td><td>Total Cost</td></th><td>";
-    foreach ($total_orders as $key => $order) {
-    	echo "<td>".$order['id']."</td><td>".$order['date']."</td>";
-    }
+     $f_val = "";
+   $i = 0;
+  while ($row = $result->fetch_assoc()) {
+    $final[] = $row;
+  }
+
+  ?>
+  <table class="table">
+			<tr>
+				<td>
+					Bill no
+				</td>
+				<td>
+					Items
+				</td>
+				<td>
+					Total
+				</td>
+			</tr>
+		
+
+		<?php 
+		$grand_total = 0;
+        foreach ($final as $value) {
+          $unserialized_values[$i]['id'] = $value['id'];
+          $unserialized_values[$i]['data'] = unserialize($value['items']);
+          $i++;
+        }
+        foreach ($unserialized_values as $final_data) {  
+          $f_val = $f_val."<tr>
+          <td>SE".$final_data['id']."</td>
+          <td>".$final_data['data']['item_name1'].",...</td>
+          <td>".$final_data['data']['grand_total']."</td></tr>";
+          $grand_total = $grand_total+$final_data['data']['grand_total'];
+        }
+        
+        echo $f_val."</table>";
+        echo '<h1 style="text-align: right;">Grand Total :- '.$grand_total.'</h1>';
+
+        ?>
+        

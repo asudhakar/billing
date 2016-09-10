@@ -94,7 +94,7 @@
        </div>
      </div>
      <div>
-     <p class="col-md-6">No:<?php  echo "se".$bill_no; ?></p>
+     <p class="col-md-6">No: <?php  echo "SE".$bill_no; ?></p>
      <p class="col-md-6" style="text-align:right;floar:right;">Date:<?php echo date('Y-m-d'); ?></p>
      </div>
           <table style="border:2px solid #000080;border-style:solid;width:100%; top:1em;">
