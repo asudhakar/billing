@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2016 at 08:29 AM
+-- Generation Time: Sep 12, 2016 at 10:18 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -37,8 +37,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `phonenumber`, `total_amount`) VALUES
-(1, '9842972047', 7040),
-(3, '7200714723', 340),
+(1, '9842972047', 1530),
+(3, '7200714723', 850),
 (4, '9443328931', 3060),
 (5, '9487253529', 170);
 
@@ -61,8 +61,10 @@ CREATE TABLE `item_details` (
 --
 
 INSERT INTO `item_details` (`id`, `item_name`, `unit_price`, `quantity`, `alert_at`) VALUES
-(12, 'pipe 3/4', 170, -1, 2),
-(13, 'CFL Lamp - 5W', 100, 8, 5);
+(12, 'pipe 3/4', 170, 5, 2),
+(13, 'CFL Lamp - 5W', 100, 8, 5),
+(14, '1/2 inch pvc pipe', 100, 10, 5),
+(15, 'biscuits', 10, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -189,7 +191,14 @@ INSERT INTO `purchase_details` (`id`, `items`, `date`, `customer_id`) VALUES
 (105, 'a:7:{s:20:"customer_phonenumber";s:0:"";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"9";s:6:"total1";s:4:"1530";s:11:"grand_total";s:4:"1530";}', '2016-09-10', 0),
 (106, 'a:7:{s:20:"customer_phonenumber";s:10:"9842972047";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 0),
 (107, 'a:7:{s:20:"customer_phonenumber";s:10:"9487253529";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"1";s:6:"total1";s:3:"170";s:11:"grand_total";s:3:"170";}', '2016-09-10', 0),
-(108, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 1);
+(108, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 1),
+(109, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 3),
+(110, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"1";s:6:"total1";s:3:"170";s:11:"grand_total";s:3:"170";}', '2016-09-10', 3),
+(111, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"1";s:6:"total1";s:3:"170";s:11:"grand_total";s:3:"170";}', '2016-09-10', 1),
+(112, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 1),
+(113, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 1),
+(114, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"biscuits";s:11:"unit_price1";s:2:"15";s:4:"qty1";s:1:"2";s:6:"total1";s:2:"30";s:11:"grand_total";s:2:"30";}', '2016-09-10', 0),
+(115, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-12', 1);
 
 --
 -- Indexes for dumped tables
@@ -226,12 +235,12 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `item_details`
 --
 ALTER TABLE `item_details`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `purchase_details`
 --
 ALTER TABLE `purchase_details`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
