@@ -12,7 +12,7 @@
     if(empty($total_due)){
     	echo "<h1>Sorry the user doesn't exist!</h1>";
     }else{
-    	echo "<h1>".$_POST['customer_numer']." has due of $total_due</h1><hr/><br/><p>Total transactions are:-</p>";
+    	echo '<table class="table"><tr><td><h1>'.$_POST['customer_numer']." has due of $total_due</h1></td><td><input type='number' name='amount_to_pay' placeholder='Paying Amount' class='form-control transparent-input' id='textbox-paying-amount' required></td></tr></table><hr/><br/><p>Total transactions are:-</p>";
     }
 
 	$sql = "SELECT * FROM `purchase_details` WHERE `customer_id` = '$id'";
@@ -55,7 +55,7 @@
         }
         
         echo $f_val."</table>";
-        echo '<h1 style="text-align: right;">Grand Total :- '.$grand_total.'</h1>';
+        echo '<h1 style="text-align: right;">Total transactions till date :- '.$grand_total.'</h1>';
 
         ?>
         

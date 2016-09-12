@@ -12,15 +12,32 @@ include_once 'header.php';
 
 	<script type="text/javascript">
 		
+		var customer_numer = $('#textbox-customer-number').val();
 		$('#textbox-customer-number').keypress(function(event){
 			var keycode = (event.keyCode ? event.keyCode : event.which);
 			if(keycode == '13'){
-				var customer_numer = $('#textbox-customer-number').val();
 		        if(customer_numer.length > 0){
 		          $.ajax({
 		            type: "POST",
 		            url: '../controller/customer_details.php',
 		            data: {customer_numer : customer_numer},
+		            success: function(data) {
+		              $( "#output_text" ).html( data );
+		            }
+		          });
+		        }
+			}
+		});
+
+		$('#textbox-paying-amount').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				var paying_amount = $('#textbox-paying-amount').val();
+		        if(paying_amount.length > 0){
+		          $.ajax({
+		            type: "POST",
+		            url: '../controller/pay_bill.php',
+		            data: {paying_amount : paying_amount, customer_numer : customer_numer},
 		            success: function(data) {
 		              $( "#output_text" ).html( data );
 		            }
