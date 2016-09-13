@@ -11,9 +11,10 @@
 
     if(empty($total_due)){
     	echo "<h1>Sorry the user doesn't exist!</h1>";
-    }else{
-    	echo '<table class="table"><tr><td><h1>'.$_POST['customer_numer']." has due of $total_due</h1></td><td><input type='number' name='amount_to_pay' placeholder='Paying Amount' class='form-control transparent-input' id='textbox-paying-amount' required></td></tr></table><hr/><br/><p>Total transactions are:-</p>";
     }
+    else{
+    	echo '<table class="table"><tr><td><h1>'.$_POST['customer_numer']." has due of $total_due</h1></td><td><form action='../controller/pay_bill.php' method='post'><input type='hidden' name='customer_number' value='".$_POST['customer_numer']."'><input type='number' name='amount_to_pay' placeholder='Paying Amount' class='form-control transparent-input' id='textbox-paying-amount' required></form></td></tr></table><hr/><br/><p>Total transactions are:-</p>";
+   
 
 	$sql = "SELECT * FROM `purchase_details` WHERE `customer_id` = '$id'";
 
@@ -40,7 +41,7 @@
 		
 
 		<?php 
-		$grand_total = 0;
+		    $grand_total = 0;
         foreach ($final as $value) {
           $unserialized_values[$i]['id'] = $value['id'];
           $unserialized_values[$i]['data'] = unserialize($value['items']);
@@ -56,6 +57,28 @@
         
         echo $f_val."</table>";
         echo '<h1 style="text-align: right;">Total transactions till date :- '.$grand_total.'</h1>';
+         }
+        echo "<hr>";
+        $sql1 = "SELECT * FROM `transactions` WHERE `phonenumber` = '".$_POST['customer_numer']."'";
+        $result1 = execute_query($sql1, $conn);
+        echo '<h1>Payment Summary</h1>';
+        if (empty($result1)){
+         echo "<h1>Sorry the user doesn't exist!</h1>"; 
+        }
+        else{        
+          while ($row = $result1->fetch_assoc()) {
+            $final1[] = $row;
+          }
+          $f_val1 = "";
+          echo "<table class='table'><tr><td>Customer no</td><td>Amount</td><td>Date</td></tr>";
+          foreach ($final1 as $final_data1) {  
+            $f_val1 = $f_val1."<tr>
+            <td>".$final_data1['phonenumber']."</td>
+            <td>".$final_data1['amount']."</td>
+            <td>".$final_data1['date']."</td></tr>";
+          }
+          echo "$f_val1";
+        }
 
         ?>
         

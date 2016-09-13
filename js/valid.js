@@ -87,13 +87,10 @@ $(document).ready(function()
 	             			document.getElementById('no_Qty'+temp).innerHTML = 0;
 	             			document.getElementById('no_Total'+temp).innerHTML = 0;
 	             			window.location.href = "../index.php";
-	             			$("form").submit(function(e){
-	             				alert("test");
-	             				e.preventDefault(e);
-	             			});
+	             			
 		                }else
 		                {
-		                	// $('#mainform').submit();
+		                	$('#mainform').submit();
 		                }
 		                }
 	        });

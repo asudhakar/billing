@@ -65,7 +65,11 @@
 			       </div>
 			    </div>
 		<input type="hidden" name="grand_total" id="grand_total1">
-		<div class="btn-group btn-group-justified" style="top:5em;width:60%;left:20em">
+		
+        </div>
+    </div>
+	</form>
+	<div class="btn-group btn-group-justified" style="top:5em;width:60%;left:20em">
     	<div class="btn-group">
           <input type="button" name="add_stock" class="btn  btn-primary" value="Add" id="btn_Add1">
         </div>
@@ -74,9 +78,6 @@
         </div>
         <div class="btn-group">
           		<input type="submit" class="btn btn-primary" id="print" value="Print">
-        </div>
-    </div>
-	</form>
 	
 </body>
 </html>
