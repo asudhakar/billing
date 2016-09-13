@@ -2,10 +2,11 @@
 		<table class="table">
 			<tr>
 				<td>
-					<input type="date" class="form-control transparent-input" id="start_date"  name="start_date" placeholder="Start Date">
+					<input type="date" class="form-control transparent-input" id="start_date"  name="start_date" 
+					value=<?php echo date('Y-m-d'); ?> placeholder="Start Date">
 				</td>
 				<td>
-					<input class="form-control transparent-input" type="date" id="end_date" name="end_date" id="no_Uprice1" placeholder="End Date">
+					<input class="form-control transparent-input" type="date" id="end_date" name="end_date" id="no_Uprice1" value=<?php echo date('Y-m-d'); ?> placeholder="End Date">
 				</td>
 				<td>
 					<button class="btn btn-default" id="get_bill">view</button>

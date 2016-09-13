@@ -11,6 +11,27 @@ $(document).ready(function()
 				source: 'search.php'
 			});
 		});
+		$(".item_name"+x).keydown(function (e) {
+		if (e.which == 9){
+		        $("#no_Uprice"+x).click();
+		   }
+		});
+		$('#searchButton').click(function(){
+		        var search = $('#usersSearch').val();
+		        $.post('../searchusers.php',{search: search},function(response){
+		            $('#userSearchResultsTable').html(response);
+		        });
+    	})
+    $('#no_Total'+x).keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('#searchButton').click();
+            $("#btn_Add1").click();
+	 		var textValue1 = document.getElementById('no_Uprice'+x).value;
+			var textValue2 = document.getElementById('no_Qty'+x).value;
+			document.getElementById('no_Total'+x).value = textValue1 * textValue2;
+
+        }
+    });
 			$("#no_Uprice"+x).click(function(){
 	       var y = document.getElementsByClassName("item_name"+x);
 	       var item_name = y[0].value;
@@ -25,7 +46,14 @@ $(document).ready(function()
 	             }
 	        });
 	});
+		$("#no_Total"+x).click(function(){
+	      var textValue1 = document.getElementById('no_Uprice'+x).value;
+			var textValue2 = document.getElementById('no_Qty'+x).value;
+			document.getElementById('no_Total'+x).value = textValue1 * textValue2;
+	});
+	
 		i++;
+	
 	});
 	$('body').on('click', '#btn_remove', function()
 	{	
@@ -87,13 +115,10 @@ $(document).ready(function()
 	             			document.getElementById('no_Qty'+temp).innerHTML = 0;
 	             			document.getElementById('no_Total'+temp).innerHTML = 0;
 	             			window.location.href = "../index.php";
-	             			$("form").submit(function(e){
-	             				alert("test");
-	             				e.preventDefault(e);
-	             			});
+	             			
 		                }else
 		                {
-		                	// $('#mainform').submit();
+		                	$('#mainform').submit();
 		                }
 		                }
 	        });
@@ -104,6 +129,36 @@ $(document).ready(function()
 			source: 'get_mobile_no.php'
 		});
 	});
+
+    $('#searchButton').click(function(){
+        var search = $('#usersSearch').val();
+        $.post('../searchusers.php',{search: search},function(response){
+            $('#userSearchResultsTable').html(response);
+        });
+    })
+    $('#no_Total1').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('#searchButton').click();
+            $("#btn_Add"+i).click();
+            var textValue1 = document.getElementById('no_Uprice1').value;
+			var textValue2 = document.getElementById('no_Qty1').value;
+			document.getElementById('no_Total1').value = textValue1 * textValue2;
+
+        }
+    });
+
+	$(".item_name1").keydown(function (e) {
+
+	   if (e.which == 9){
+	        $("#no_Uprice1").click();
+	   }
+	});
+	$("#no_Total1").click(function(){
+	      var textValue1 = document.getElementById('no_Uprice1').value;
+			var textValue2 = document.getElementById('no_Qty1').value;
+			document.getElementById('no_Total1').value = textValue1 * textValue2;
+	});
+	
 	
 });
 

@@ -1,10 +1,15 @@
 <?php 
 include_once 'header.php';
+if(isset($_GET['number'])){
+	$number = $_GET['number'];
+}else{
+	$number = "";
+}
 ?>
 <br/>
 <br/>
 
-	<input type="number" name="number_search" placeholder="Enter Customer Number" class="form-control transparent-input" id="textbox-customer-number" required>
+	<input type="number" name="number_search" placeholder="Enter Customer Number" class="form-control transparent-input" id="textbox-customer-number" value="<?php echo $number;?>" required>
 
 	<div id="output_text"></div>
 

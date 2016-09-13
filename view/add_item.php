@@ -98,7 +98,7 @@
 					echo "<td>".$value['unit_price']."</td>";
 					echo "<td>".$value['quantity']."</td>";
 					echo "<td>".$value['alert_at']."</td>";	
-					echo "<td><a style='color:WHITE' href='../view/edit_item.php?id=".$value['id']."'><button class='col-md-2 btn btn-success'>Edit</a> <a style='color:WHITE' href='../controller/delete_item.php?id=".$value['id']."'><button class='col-md-2 btn btn-danger'>Delete</a></td>";		
+					echo "<td><a style='color:WHITE' href='../view/edit_item.php?id=".$value['id']."'><button class='col-md-3 btn btn-success'>Edit</a> <a style='color:WHITE' href='../controller/delete_item.php?id=".$value['id']."'><button class='col-md-3 btn btn-danger'>Delete</a></td>";		
 					echo "</tr>";
 				}
 
