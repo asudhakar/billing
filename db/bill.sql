@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Sep 14, 2016 at 08:50 AM
+=======
+-- Generation Time: Sep 12, 2016 at 03:18 PM
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -28,11 +32,30 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `customers` (
   `id` int(25) NOT NULL,
+<<<<<<< HEAD
   `name` varchar(255) NOT NULL,
   `phone_number` varchar(255) NOT NULL,
   `total_amount` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+=======
+  `phonenumber` bigint(255) NOT NULL,
+  `total_amount` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `phonenumber`, `total_amount`) VALUES
+(1, 9842972047, -285),
+(3, 7200714723, 340),
+(4, 9443328931, 1610),
+(5, 9487253529, 170),
+(6, 8940698743, 0),
+(7, 8940698743, 500);
+
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 -- --------------------------------------------------------
 
 --
@@ -85,6 +108,10 @@ INSERT INTO `item_details` (`id`, `item_name`, `unit_price`, `quantity`, `alert_
 (31, 'GI PIPE 1 1/2 INCH ', 150, 100, 10),
 (32, 'GI PIPE 2 INCH ', 150, 100, 10),
 (33, 'GI PIPE 2 1/2 INCH ', 150, 100, 10),
+<<<<<<< HEAD
+=======
+(34, 'GI PIPE 2 1/2 INCH ', 150, 100, 10),
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 (35, 'GI PIPE 3 INCH ', 150, 100, 10),
 (36, 'GI PIPE 4 INCH ', 150, 100, 10),
 (37, 'PVC L BOW 1/2 INCH ', 150, 100, 10),
@@ -101,6 +128,10 @@ INSERT INTO `item_details` (`id`, `item_name`, `unit_price`, `quantity`, `alert_
 (48, 'UPVC L BOW 1/4 INCH', 150, 100, 10),
 (49, 'UPVC L BOW 3 INCH ', 150, 100, 10),
 (50, 'UPVC L BOW 3 1/2 INCH ', 150, 100, 10),
+<<<<<<< HEAD
+=======
+(51, 'UPVC L BOW 3 INCH ', 150, 100, 10),
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 (52, 'UPVC L BOW 4 INCH ', 150, 100, 10),
 (53, 'CPVC L BOW 3/4 INCH ', 150, 100, 10),
 (54, 'CPVC L BOW 1 INCH ', 150, 100, 10),
@@ -589,15 +620,171 @@ CREATE TABLE `purchase_details` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Dumping data for table `purchase_details`
+--
+
+INSERT INTO `purchase_details` (`id`, `items`, `date`, `customer_id`) VALUES
+(1, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(2, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"20";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(3, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"2";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(4, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"30";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(5, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"3";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(6, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"12";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(7, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(8, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(9, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(10, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(11, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"30";s:6:"total1";s:2:"90";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(12, 'a:21:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:0:"";s:4:"sno3";s:1:"3";s:10:"item_nam', '0000-00-00', 0),
+(13, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(14, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:2:"15";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(15, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:2:"15";s:11:"grand_total";s:2:"50";}', '0000-00-00', 0),
+(16, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(17, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"pencil";s:11:"unit_price1";s:1:"5";s:4:"qty1";s:1:"5";s:6:"total1";s:2:"25";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(18, 'a:6:{s:3:"sno";s:1:"1";s:10:"item_name1";s:0:"";s:10:"unit_price";s:0:"";s:3:"qty";s:0:"";s:5:"total";s:1:"0";s:7:"g_total";s:1:"0";}', '0000-00-00', 0),
+(19, 'a:6:{s:3:"sno";s:1:"1";s:10:"item_name1";s:3:"pen";s:10:"unit_price";s:2:"20";s:3:"qty";s:2:"20";s:5:"total";s:3:"400";s:7:"g_total";s:3:"400";}', '0000-00-00', 0),
+(20, 'a:11:{s:3:"sno";s:1:"1";s:10:"item_name1";s:6:"eraser";s:10:"unit_price";s:1:"3";s:3:"qty";s:1:"6";s:5:"total";s:2:"18";s:4:"sno2";s:1:"2";s:10:"item_name2";s:3:"pen";s:11:"unit_price2";s:2:"20";s:4:"qty2";s:1:"6";s:6:"total2";s:3:"120";s:7:"g_total";s:3:', '0000-00-00', 0),
+(21, 'a:16:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"7";s:6:"total1";s:2:"21";s:4:"sno2";s:1:"2";s:10:"item_name2";s:3:"pen";s:11:"unit_price2";s:2:"20";s:4:"qty2";s:1:"8";s:6:"total2";s:3:"160";s:4:"sno3";s:1', '0000-00-00', 0),
+(22, 'a:16:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:0:"";s:4:"sno3";s:1:"3";s:10:"item_nam', '0000-00-00', 0),
+(23, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(24, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(25, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(26, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(27, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(28, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(29, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(30, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(31, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"20";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(32, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:0:"";s:12:"grand_total1";s:0:"";}', '0000-00-00', 0),
+(33, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:0:"";s:11:"grand_total";s:0:"";}', '0000-00-00', 0),
+(34, 'a:26:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:0:"";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:0:"";s:4:"sno3";s:1:"3";s:10:"item_nam', '0000-00-00', 0),
+(35, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(36, 'a:16:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"5";s:6:"total1";s:0:"";s:4:"sno2";s:1:"2";s:10:"item_name2";s:3:"pen";s:11:"unit_price2";s:2:"20";s:4:"qty2";s:1:"7";s:6:"total2";s:0:"";s:4:"sno3";s:1:"3";', '0000-00-00', 0),
+(37, 'a:11:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(38, 'a:11:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(39, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(40, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(41, 'a:16:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:1:"0";s:4:"sno3";s:1:"3";s:10:"item_n', '0000-00-00', 0),
+(42, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(43, 'a:0:{}', '0000-00-00', 0),
+(44, 'a:11:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(45, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:0:"";s:11:"unit_price1";s:0:"";s:4:"qty1";s:0:"";s:6:"total1";s:1:"0";s:11:"grand_total";s:1:"0";}', '0000-00-00', 0),
+(46, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"70";s:6:"total1";s:4:"1400";s:11:"grand_total";s:4:"1400";}', '0000-00-00', 0),
+(47, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"70";s:6:"total1";s:4:"1400";s:11:"grand_total";s:4:"1400";}', '0000-00-00', 0),
+(48, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"55";s:6:"total1";s:4:"1100";s:11:"grand_total";s:4:"1100";}', '0000-00-00', 0),
+(49, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"60";s:6:"total1";s:4:"1200";s:11:"grand_total";s:4:"1200";}', '0000-00-00', 0),
+(50, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"90";s:6:"total1";s:3:"270";s:11:"grand_total";s:3:"270";}', '0000-00-00', 0),
+(51, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:11:"grand_total";s:5:"27270";}', '0000-00-00', 0),
+(52, 'a:21:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:4:"sno2";s:1:"2";s:10:"item_name2";s:0:"";s:11:"unit_price2";s:0:"";s:4:"qty2";s:0:"";s:6:"total2";s:1:"0";s:4:"sno3";s:1:"3";', '0000-00-00', 0),
+(53, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:11:"grand_total";s:5:"27270";}', '0000-00-00', 0),
+(54, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:11:"grand_total";s:5:"27270";}', '0000-00-00', 0),
+(55, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:11:"grand_total";s:5:"27270";}', '0000-00-00', 0),
+(56, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:4:"9090";s:6:"total1";s:5:"27270";s:11:"grand_total";s:5:"27270";}', '0000-00-00', 0),
+(57, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:5:"99999";s:6:"total1";s:6:"299997";s:11:"grand_total";s:6:"299997";}', '0000-00-00', 0),
+(58, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"98";s:6:"total1";s:3:"294";s:11:"grand_total";s:3:"294";}', '0000-00-00', 0),
+(59, 'a:0:{}', '0000-00-00', 0),
+(60, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"98";s:6:"total1";s:3:"294";s:11:"grand_total";s:3:"294";}', '0000-00-00', 0),
+(61, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"98";s:6:"total1";s:3:"294";s:11:"grand_total";s:3:"294";}', '0000-00-00', 0),
+(62, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:1:"6";s:6:"total1";s:2:"18";s:11:"grand_total";s:2:"18";}', '0000-00-00', 0),
+(63, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:1:"2";s:6:"total1";s:2:"40";s:11:"grand_total";s:2:"40";}', '0000-00-00', 0),
+(64, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:1:"9";s:4:"qty1";s:1:"9";s:6:"total1";s:2:"81";s:11:"grand_total";s:2:"81";}', '0000-00-00', 0),
+(65, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"23";s:6:"total1";s:3:"460";s:11:"grand_total";s:3:"460";}', '0000-00-00', 0),
+(66, 'a:0:{}', '0000-00-00', 0),
+(67, 'a:0:{}', '0000-00-00', 0),
+(68, 'a:0:{}', '0000-00-00', 0),
+(69, 'a:0:{}', '0000-00-00', 0),
+(70, 'a:0:{}', '0000-00-00', 0),
+(71, 'a:0:{}', '0000-00-00', 0),
+(72, 'a:0:{}', '0000-00-00', 0),
+(73, 'a:0:{}', '0000-00-00', 0),
+(74, 'a:0:{}', '0000-00-00', 0),
+(75, 'a:0:{}', '0000-00-00', 0),
+(76, 'a:0:{}', '0000-00-00', 0),
+(77, 'a:0:{}', '0000-00-00', 0),
+(78, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"23";s:6:"total1";s:3:"460";s:11:"grand_total";s:3:"460";}', '0000-00-00', 0),
+(79, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"34";s:6:"total1";s:3:"680";s:11:"grand_total";s:3:"680";}', '0000-00-00', 0),
+(80, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:6:"eraser";s:11:"unit_price1";s:1:"3";s:4:"qty1";s:2:"56";s:6:"total1";s:3:"168";s:11:"grand_total";s:3:"168";}', '0000-00-00', 0),
+(81, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:4:"test";s:11:"unit_price1";s:2:"23";s:4:"qty1";s:2:"23";s:6:"total1";s:3:"529";s:11:"grand_total";s:3:"529";}', '0000-00-00', 0),
+(82, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:3:"pen";s:11:"unit_price1";s:2:"20";s:4:"qty1";s:2:"67";s:6:"total1";s:4:"1340";s:11:"grand_total";s:4:"1340";}', '0000-00-00', 0),
+(83, 'a:0:{}', '0000-00-00', 0),
+(84, 'a:0:{}', '0000-00-00', 0),
+(85, 'a:0:{}', '0000-00-00', 0),
+(86, 'a:0:{}', '0000-00-00', 0),
+(87, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:4:"pipe";s:11:"unit_price1";s:2:"23";s:4:"qty1";s:1:"4";s:6:"total1";s:2:"92";s:11:"grand_total";s:2:"92";}', '0000-00-00', 0),
+(88, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:4:"pipe";s:11:"unit_price1";s:2:"23";s:4:"qty1";s:1:"2";s:6:"total1";s:2:"46";s:11:"grand_total";s:2:"46";}', '2016-09-09', 0),
+(89, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:12:"50 what bulp";s:11:"unit_price1";s:2:"50";s:4:"qty1";s:1:"7";s:6:"total1";s:3:"350";s:11:"grand_total";s:3:"350";}', '2016-09-09', 0),
+(90, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:12:"50 what bulp";s:11:"unit_price1";s:2:"50";s:4:"qty1";s:1:"7";s:6:"total1";s:3:"350";s:11:"grand_total";s:3:"350";}', '2016-09-09', 0),
+(91, '', '0000-00-00', 0),
+(92, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:12:"50 what bulp";s:11:"unit_price1";s:2:"50";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"250";s:11:"grand_total";s:3:"250";}', '2016-09-09', 0),
+(93, '', '0000-00-00', 0),
+(94, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:12:"50 what bulp";s:11:"unit_price1";s:2:"50";s:4:"qty1";s:1:"6";s:6:"total1";s:3:"300";s:11:"grand_total";s:3:"300";}', '2016-09-09', 0),
+(95, '', '0000-00-00', 0),
+(96, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:4:"pipe";s:11:"unit_price1";s:2:"23";s:4:"qty1";s:1:"7";s:6:"total1";s:3:"161";s:11:"grand_total";s:3:"161";}', '2016-09-09', 0),
+(97, '', '0000-00-00', 0),
+(98, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"500";s:11:"grand_total";s:3:"500";}', '2016-09-09', 0),
+(99, '', '0000-00-00', 0),
+(100, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:1:"7";s:6:"total1";s:3:"700";s:11:"grand_total";s:3:"700";}', '2016-09-09', 0),
+(101, 'a:7:{s:20:"customer_phonenumber";s:0:"";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"850";s:11:"grand_total";s:3:"850";}', '2016-09-09', 0),
+(102, 'a:7:{s:20:"customer_phonenumber";s:0:"";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"4";s:6:"total1";s:3:"680";s:11:"grand_total";s:3:"680";}', '2016-09-09', 0),
+(103, 'a:7:{s:20:"customer_phonenumber";s:0:"";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"7";s:6:"total1";s:4:"1190";s:11:"grand_total";s:4:"1190";}', '2016-09-09', 0),
+(104, 'a:7:{s:20:"customer_phonenumber";s:10:"9443328931";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 0),
+(105, 'a:7:{s:20:"customer_phonenumber";s:0:"";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"9";s:6:"total1";s:4:"1530";s:11:"grand_total";s:4:"1530";}', '2016-09-10', 0),
+(106, 'a:7:{s:20:"customer_phonenumber";s:10:"9842972047";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 0),
+(107, 'a:7:{s:20:"customer_phonenumber";s:10:"9487253529";s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"1";s:6:"total1";s:3:"170";s:11:"grand_total";s:3:"170";}', '2016-09-10', 0),
+(108, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-10', 1),
+(109, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"2";s:6:"total1";s:3:"340";s:11:"grand_total";s:3:"340";}', '2016-09-12', 1),
+(110, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"850";s:11:"grand_total";s:3:"850";}', '2016-09-12', 4),
+(111, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:8:"pipe 3/4";s:11:"unit_price1";s:3:"170";s:4:"qty1";s:2:"30";s:6:"total1";s:4:"5100";s:11:"grand_total";s:4:"5100";}', '2016-09-12', 0),
+(112, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"500";s:11:"grand_total";s:3:"500";}', '2016-09-12', 6),
+(113, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:4:"1000";s:6:"total1";s:6:"100000";s:11:"grand_total";s:6:"100000";}', '2016-09-12', 0),
+(114, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:3:"500";s:6:"total1";s:5:"50000";s:11:"grand_total";s:5:"50000";}', '2016-09-12', 0),
+(115, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:3:"500";s:6:"total1";s:5:"50000";s:11:"grand_total";s:5:"50000";}', '2016-09-12', 0),
+(116, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:4:"5000";s:6:"total1";s:6:"500000";s:11:"grand_total";s:6:"500000";}', '2016-09-12', 0),
+(117, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:3:"500";s:6:"total1";s:5:"50000";s:11:"grand_total";s:5:"50000";}', '2016-09-12', 0),
+(118, 'a:6:{s:4:"sno1";s:1:"1";s:10:"item_name1";s:13:"CFL Lamp - 5W";s:11:"unit_price1";s:3:"100";s:4:"qty1";s:1:"5";s:6:"total1";s:3:"500";s:11:"grand_total";s:3:"500";}', '2016-09-12', 0);
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 -- Table structure for table `transactions`
 --
 
 CREATE TABLE `transactions` (
   `id` int(255) NOT NULL,
+<<<<<<< HEAD
   `phone_number` bigint(255) NOT NULL,
   `amount` int(255) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+=======
+  `phonenumber` bigint(255) NOT NULL,
+  `amount` int(255) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`id`, `phonenumber`, `amount`, `date`) VALUES
+(1, 2147483647, 45, '0000-00-00'),
+(2, 2147483647, 335, '0000-00-00'),
+(3, 2147483647, 500, '0000-00-00'),
+(4, 2147483647, 100, '0000-00-00'),
+(5, 2147483647, 6000, '0000-00-00'),
+(6, 9842972047, 20, '0000-00-00'),
+(7, 9842972047, 50, '0000-00-00'),
+(8, 9842972047, 520, '0000-00-00'),
+(9, 9842972047, 50, '2016-09-12'),
+(10, 9842972047, 45, '2016-09-12'),
+(11, 9443328931, 100, '2016-09-12'),
+(12, 9443328931, 200, '2016-09-12'),
+(13, 9443328931, 2000, '2016-09-12'),
+(14, 8940698743, 5100, '2016-09-12');
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 
 --
 -- Indexes for dumped tables
@@ -636,7 +823,11 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
+<<<<<<< HEAD
   MODIFY `id` int(25) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 --
 -- AUTO_INCREMENT for table `item_details`
 --
@@ -646,12 +837,20 @@ ALTER TABLE `item_details`
 -- AUTO_INCREMENT for table `purchase_details`
 --
 ALTER TABLE `purchase_details`
+<<<<<<< HEAD
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
+<<<<<<< HEAD
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+>>>>>>> 14b5cc52e349fc1b0c0e9b0f7c8e2ad84d39ebaa
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
